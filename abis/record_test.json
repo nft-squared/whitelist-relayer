@@ -1,0 +1,23 @@
+{
+    "1666700000": {
+        "__NAME__": "hmy_test",
+        "__MAPPING__": {
+            "AppRegistry": "AppRegistry",
+            "Licenser": "Licenser",
+            "NFT2": "NFT2",
+            "IPPoolShadows": {
+                "4": "IPPoolShadow"
+            },
+            "APPDemo": "APPDemo",
+            "Lens": "Lens"
+        },
+        "AppRegistry": "0x1b67D1A96fA791B8f4Fa65003f1CA03A79227204",
+        "Licenser": "0x88a53AAA422ae6F404420C76a538c454b7CC1888",
+        "NFT2": "0xC4E441575f3Cb4645CFA08E6C2c4ecd1894Af516",
+        "IPPoolShadows": {
+            "4": "0x52AF543cEE279B83e431B166609d3b242E2cB168"
+        },
+        "APPDemo": "0xBBD001238dfc8A2daD2315Dd868c3ae8EFaCD167",
+        "Lens": "0xd1A0700931D248841204f21e528Ed540f04C7879"
+    }
+}

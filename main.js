@@ -2,9 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const { JSONRPCServer } = require("json-rpc-2.0");
 const cors = require('cors');
-const { IPAddTask } = require('./IPPoolShdow')
+const { IPAddTask } = require('./ElitePad')
 const { verifyTypeData } = require('./EIP712')
-const { ownerOf } = require('./IPVerifier');
+const { ownerCheck } = require('./IPVerifier');
+const { ElitePad } = require('./contracts');
 
 const server = new JSONRPCServer();
 
@@ -17,16 +18,14 @@ server.addMethod('Authorize', async ({ domain, message, signature }) => {
     const { chainId, verifyingContract } = domain
     const {
         tokens,
-        nonce
+        referenceCode,
+        //nonce
     } = message
-    console.log(message)
+    //console.log(message)
     const account = verifyTypeData('Authorize', domain, message, signature)
-    //if (!EQ(account, verifyingContract)) throw new Error(`invalid account: ${account} != ${verifyingContract}`)
-    //const owner = await ownerOf(token, tokenID)
-    //if(!EQ(account, owner)) throw new Error(`invalid owner: ${account} != ${owner}`)
-    //return IPAddTask(token, tokenID, account)
-    console.log(account)
-    return account
+    if (!EQ(ElitePad.address, verifyingContract)) throw new Error(`invalid verifyingContract: ${ElitePad.address} != ${verifyingContract}`)
+    if(!await ownerCheck(tokens, account)) throw new Error(`invalid token owner`)
+    return IPAddTask(tokens, account, referenceCode)
 });
 
 const app = express();

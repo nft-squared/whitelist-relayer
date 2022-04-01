@@ -1,11 +1,15 @@
-const { abi } = require('./abis/IERC721.json')
-const ethers = require('ethers')
+const {CryptoPunk, IERC721_Temp} = require('./contracts')
 
-const provider = new ethers.providers.StaticJsonRpcProvider('https://mainnet.infura.io/v3/1a2431ca526c4e50a0a01f861e48642a')
-
+const EQ = (addr1, addr2)=>addr1.toLowerCase() == addr2.toLowerCase()
 module.exports = {
-    ownerOf(token, tokenID){
-        const IERC721 = new ethers.Contract(token, abi, provider)
-        return IERC721.ownerOf(tokenID)
+    async ownerCheck(tokens, owner){
+        for(const {token,tokenIDs} of tokens) {
+            const ownerOf = EQ(token, CryptoPunk.address) ? CryptoPunk.punkIndexToAddress : IERC721_Temp.attach(token).ownerOf   
+            for(const tokenID of tokenIDs) {
+                const tokenOwner = await ownerOf(tokenID)
+                if(!EQ(owner, tokenOwner)) return false
+            }
+        }
+        return true
     }
 }

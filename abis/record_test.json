@@ -2,22 +2,26 @@
     "1666700000": {
         "__NAME__": "hmy_test",
         "__MAPPING__": {
-            "AppRegistry": "AppRegistry",
-            "Licenser": "Licenser",
-            "NFT2": "NFT2",
-            "IPPoolShadows": {
-                "4": "IPPoolShadow"
-            },
-            "APPDemo": "APPDemo",
-            "Lens": "Lens"
+            "ERC20Mock": "ERC20Mock",
+            "Access": "Access",
+            "Epoch": "Epoch",
+            "Weights": "Weights",
+            "AirdropOne": "AirdropOne",
+            "AuthPool": "AuthPool",
+            "RaffleTicket": "RaffleTicket",
+            "BucketFactory": "BucketFactory",
+            "Reference": "Reference",
+            "ElitePad": "ElitePad"
         },
-        "AppRegistry": "0x1b67D1A96fA791B8f4Fa65003f1CA03A79227204",
-        "Licenser": "0x88a53AAA422ae6F404420C76a538c454b7CC1888",
-        "NFT2": "0xC4E441575f3Cb4645CFA08E6C2c4ecd1894Af516",
-        "IPPoolShadows": {
-            "4": "0x52AF543cEE279B83e431B166609d3b242E2cB168"
-        },
-        "APPDemo": "0xBBD001238dfc8A2daD2315Dd868c3ae8EFaCD167",
-        "Lens": "0xd1A0700931D248841204f21e528Ed540f04C7879"
+        "ERC20Mock": "0xdDa47520CA9A3750B5196c0558aF3f37B75F6b87",
+        "Access": "0xFd62423cc200066b97de71b88773A2b8196Fa50C",
+        "Epoch": "0x54c2F66c3903B8212F867B87bCB67a7AAE8A231C",
+        "Weights": "0x4C470B588c3cFa70A6532d5B47EBC7A4AE133F78",
+        "AirdropOne": "0x7208b5Af200B30D44bF1e918539ADE36c86138aC",
+        "AuthPool": "0x436fa8cF91950013208873ecf0CE277B2541bc68",
+        "RaffleTicket": "0x4f8C15495E6b04a7c6A509cd3e052EC34D19d19A",
+        "BucketFactory": "0x315F81BF317f9400a18130233B2CA5C95d10869D",
+        "Reference": "0x8C008F436DE52C0e9bCDb5c2Adbc7563683acA9b",
+        "ElitePad": "0x696057ACe1A35886CDba85aEdc7B6e5e5C54fB7f"
     }
 }

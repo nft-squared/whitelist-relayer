@@ -14,6 +14,7 @@ const Tokens = [
 ]
 const Authorize = [
     { name: 'tokens', type: 'Tokens[]' },
+    { name: 'referenceCode', type: 'string' },
     { name: 'nonce', type: 'uint256' },
     //{ name: 'deadline', type: 'uint256' }
   ]
